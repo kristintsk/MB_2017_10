@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>MB pildiralli</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" />
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="stylesheet" type="text/css" rel="styles.css">
+
+</head>
+
+<body>
+    <section class="swiper-container loading">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide slide1">
+                <div class="content">
+                    <span class="caption" data-swiper-parallax="-20%">Siin on mõned ülesvõtted minust, <br> mis on tehtud 03.10.2017. <br> Vanust oli mul siis viis ja pool kuud.</span>
+                    <p id="firstPic" class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">-- Kristofer --</p>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide2">
+                <div class="content">
+                    <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">Issiga</p>
+                    <span class="caption" data-swiper-parallax="-20%">Lorem Ipsum has been the industry's standard dummy text ever since.</span>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide3">
+
+                <div class="content">
+                    <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">Oma suure õega</p>
+                    <span class="caption" data-swiper-parallax="-20%">Lorem Ipsum has been the industry's standard dummy text ever since.</span>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide4">
+                <div class="content">
+                    <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">Üksi</p>
+                    <span class="caption" data-swiper-parallax="-20%">Lorem Ipsum has been the industry's standard dummy text ever since.</span>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide5">
+                <div class="content">
+                    <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">Emmega</p>
+                    <span class="caption" data-swiper-parallax="-20%">Lorem Ipsum has been the industry's standard dummy text ever since.</span>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide6">
+                <div class="content">
+                    <p class="title" data-swiper-parallax="-30%" data-swiper-parallax-scale=".7">Kohvris</p>
+                    <span class="caption" data-swiper-parallax="-20%">Lorem Ipsum has been the industry's standard dummy text ever since.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
+    <script>
+        let sliderSelector = '.swiper-container',
+            options = {
+                loop: true,
+                speed: 800,
+                slidesPerView: 2, // or 'auto'
+                spaceBetween: 20,
+                centeredSlides: true,
+                effect: 'coverflow', // 'cube', 'fade', 'coverflow',
+                coverflowEffect: {
+                    rotate: 50, // Slide rotate in degrees
+                    stretch: 0, // Stretch space between slides (in px)
+                    depth: 50, // Depth offset in px (slides translate in Z axis)
+                    modifier: 1, // Effect multipler
+                    slideShadows: true // Enables slides shadows
+                },
+                grabCursor: true,
+                parallax: true,
+                on: {
+                    imagesReady: function() {
+                        this.el.classList.remove('loading');
+                    }
+                }
+            };
+        let mySwiper = new Swiper(sliderSelector, options);
+        mySwiper.init();
+    </script>
+</body>
+
+</html>
